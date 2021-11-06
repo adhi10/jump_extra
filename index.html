@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>checkbox extra</title>
+</head>
+
+<body>
+    <script language="javascript">
+
+
+
+        function change() {
+            var elem = document.getElementById("myButton1");
+
+            if (elem.value == "Jump >") {
+                elem.value = "Jump <";
+                var firstVal = $('#first').val();
+                $('#first').val("");
+                $('#second').val(firstVal);
+
+            }
+            else {
+                elem.value = "Jump >";
+                var secondVal = $('#second').val();
+                $('#second').val("");
+                $('#first').val(secondVal);
+
+            }
+        }
+
+    </script>
+
+
+    <form>
+        <div>
+            <div>
+                <input id="first" name="" value="" />
+
+                <input onclick="change()" type="button" value="Jump >" id="myButton1"></input>
+
+                <input id="second" name="" value="" />
+            </div>
+        </div>
+
+
+
+
+</body>
+
+</html>
